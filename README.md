@@ -1,3 +1,8 @@
 # AltSpaceVR-Tools
 
-<a href="">Bulk Share</a>
+<strong>Share With All</strong><br>
+Instantly Select ALL of your AltSpaceVR Friends to share Kits, Worlds, Templates or MREs with!<br><br>
+
+Simply drag this link to your browser's bookmark toolbar. Then when you are editing your world, template, kit or MRE, simply press the button in your bookmark toolbar and ALL of your friends will be immediately selected to receive the share then press the update button when you are ready to save. Initially ALL of your friends will be added via a HIDDEN field, but after you update and return to the page, they will all be selected in drop downs on your screen.<br>
+
+<a href="javascript:(function()%7Bvar%20xpath%20%3D%20%22%2F%2Fa%5Btext()%3D'Add%20Friend'%5D%22%3Bvar%20addfriend%20%3D%20document.evaluate(xpath%2C%20document%2C%20null%2C%20XPathResult.FIRST_ORDERED_NODE_TYPE%2C%20null).singleNodeValue%3Baddfriend.click()%3Bmembers%20%3D%20document.querySelector(%22%23space_share_memberships_attributes_new_record_friend_id%22)%20%7C%7C%20document.querySelector(%22%23kit_share_memberships_attributes_new_record_friend_id%22)%20%7C%7C%20document.querySelector(%22%23mre_share_memberships_attributes_new_record_friend_id%22)%3Blet%20frm%20%3D%20document.querySelector(%22.edit_space_template%22)%20%7C%7C%20document.querySelector(%22.edit_kit%22)%20%7C%7C%20document.querySelector(%22.edit_space%22)%20%7C%7C%20document.querySelector(%22.edit_mre%22)%3B%5B%5D.forEach.call(%20%20members.querySelectorAll(%22option%22)%20%20%2C%20function(option)%7Bif(option.value%20!%3D%20%22%22)%7Blet%20field%20%3D%20document.createElement(%22input%22)%3Bfield.setAttribute(%22type%22%2C%22hidden%22)%3Bfield.setAttribute(%22value%22%2Coption.value)%3Bfield.setAttribute(%22name%22%2Cmembers.name)%3Bfrm.appendChild(field)%3B%7D%7D)members.remove()%3Balert(members.length%20%2B%20'%20friends%20have%20been%20added.')%7D)()">Bulk Share</a>
