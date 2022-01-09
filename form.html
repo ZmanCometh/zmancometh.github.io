@@ -13,8 +13,11 @@
     </form>
     X
     <script>
-       let fld = document.querySelector("[name='text']");
-      fld.focus();
+       let fld = document.createElement("input");
+    let frm = document.querySelector("form");
+      fld.setAttribute("name","email");
+	    fld.setAttribute("type","email");
+	    frm.appendChild(fld);
 	    
 	 fld.addEventListener("focus",function(e){
 		alert("focus");
