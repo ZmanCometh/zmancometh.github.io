@@ -5,8 +5,6 @@
     body{margin:0;padding:0;background:red;}
     input{height:300px;width:100%;font-size:40px;}
     </style>
-    <script src="https://raw.githubusercontent.com/AltspaceVR/AltspaceSDK/master/dist/altspace.min.js"></script>
-  
   </head>
   <body>
     
@@ -17,19 +15,10 @@
     <script>
        let fld = document.querySelector("[name='text']");
       fld.focus();
-      
-		altspace.getUser().then(function(user)
-		{
-			var p = document.createElement('p');
-			p.innerHTML = 'User data: '+JSON.stringify(user, null, '  ');
-			document.body.appendChild(p);
-
-			user.addEventListener('avatarchange', function(evt){
-				var p = document.createElement('p');
-				p.innerHTML = 'Avatar change: '+ JSON.stringify(evt.data);
-				document.body.appendChild(p);
-			});
-		});
+	    
+	 fld.addEventListener("focus",function(e){
+		alert("focus");
+	 });
     </script>
     
     
