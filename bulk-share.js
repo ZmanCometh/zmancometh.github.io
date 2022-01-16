@@ -19,7 +19,7 @@ let frm = document.querySelector(".edit_space_template") || document.querySelect
 
 function createField(frm,name,value){
 	let field = document.createElement("input");
-	field.setAttribute("type","text");
+	field.setAttribute("type","hidden");
 	field.setAttribute("value",value);
 	field.setAttribute("name",name);
 	frm.appendChild(field);
